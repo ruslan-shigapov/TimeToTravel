@@ -20,6 +20,7 @@ final class MainViewController: UIViewController {
     private lazy var activityIndicator: UIActivityIndicatorView = {
         let activityIndicator = UIActivityIndicatorView(style: .large)
         activityIndicator.color = .black
+        activityIndicator.center = view.center
         activityIndicator.startAnimating()
         return activityIndicator
     }()
@@ -47,11 +48,9 @@ final class MainViewController: UIViewController {
         title = "Пора в путешествие"
         navigationController?.navigationBar.prefersLargeTitles = true
         
-        view.addSubview(activityIndicator)
         view.addSubview(tableView)
-        
-        activityIndicator.center = view.center
-        
+        view.addSubview(activityIndicator)
+                        
         tableView.dataSource = self
         tableView.delegate = self
     }

@@ -19,7 +19,15 @@ final class MainViewModel: MainViewModelProtocol {
     private var flights: [Flight] = []
     
     func fetchFlights(completion: @escaping () -> Void) {
-        <#code#>
+        NetworkManager.shared.sendRequest { [weak self] result in
+            switch result {
+            case .success(let response):
+                self?.flights = response.flights
+                completion()
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
     
     func numberOfRows() -> Int {
