@@ -9,19 +9,33 @@
 /* Begin PBXBuildFile section */
 		E4F6C1EF2A9E2F4C000251F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F6C1EE2A9E2F4C000251F3 /* AppDelegate.swift */; };
 		E4F6C1F12A9E2F4C000251F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F6C1F02A9E2F4C000251F3 /* SceneDelegate.swift */; };
-		E4F6C1F32A9E2F4C000251F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F6C1F22A9E2F4C000251F3 /* ViewController.swift */; };
+		E4F6C1F32A9E2F4C000251F3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F6C1F22A9E2F4C000251F3 /* MainViewController.swift */; };
 		E4F6C1F82A9E2F4E000251F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4F6C1F72A9E2F4E000251F3 /* Assets.xcassets */; };
 		E4F6C1FB2A9E2F4E000251F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4F6C1F92A9E2F4E000251F3 /* LaunchScreen.storyboard */; };
+		E4F6C2082A9E3566000251F3 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F6C2072A9E3566000251F3 /* DetailsViewController.swift */; };
+		E4F6C20A2A9E3636000251F3 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F6C2092A9E3636000251F3 /* MainViewModel.swift */; };
+		E4F6C20D2A9E3B26000251F3 /* FlightCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F6C20C2A9E3B26000251F3 /* FlightCell.swift */; };
+		E4F6C20F2A9E3CCA000251F3 /* FlightCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F6C20E2A9E3CCA000251F3 /* FlightCellViewModel.swift */; };
+		E4F6C2112A9E3DA0000251F3 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F6C2102A9E3DA0000251F3 /* DetailsViewModel.swift */; };
+		E4F6C2142A9E3E2A000251F3 /* Flight.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F6C2132A9E3E2A000251F3 /* Flight.swift */; };
+		E4F6C2172A9E43DF000251F3 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F6C2162A9E43DF000251F3 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E4F6C1EB2A9E2F4C000251F3 /* TimeToTravel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeToTravel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4F6C1EE2A9E2F4C000251F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4F6C1F02A9E2F4C000251F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E4F6C1F22A9E2F4C000251F3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E4F6C1F22A9E2F4C000251F3 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		E4F6C1F72A9E2F4E000251F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4F6C1FA2A9E2F4E000251F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E4F6C1FC2A9E2F4E000251F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4F6C2072A9E3566000251F3 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		E4F6C2092A9E3636000251F3 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		E4F6C20C2A9E3B26000251F3 /* FlightCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightCell.swift; sourceTree = "<group>"; };
+		E4F6C20E2A9E3CCA000251F3 /* FlightCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightCellViewModel.swift; sourceTree = "<group>"; };
+		E4F6C2102A9E3DA0000251F3 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
+		E4F6C2132A9E3E2A000251F3 /* Flight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flight.swift; sourceTree = "<group>"; };
+		E4F6C2162A9E43DF000251F3 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +68,85 @@
 		E4F6C1ED2A9E2F4C000251F3 /* TimeToTravel */ = {
 			isa = PBXGroup;
 			children = (
-				E4F6C1EE2A9E2F4C000251F3 /* AppDelegate.swift */,
-				E4F6C1F02A9E2F4C000251F3 /* SceneDelegate.swift */,
-				E4F6C1F22A9E2F4C000251F3 /* ViewController.swift */,
-				E4F6C1F72A9E2F4E000251F3 /* Assets.xcassets */,
-				E4F6C1F92A9E2F4E000251F3 /* LaunchScreen.storyboard */,
-				E4F6C1FC2A9E2F4E000251F3 /* Info.plist */,
+				E4F6C2022A9E348E000251F3 /* App */,
+				E4F6C2052A9E352B000251F3 /* MainScreen */,
+				E4F6C2062A9E354C000251F3 /* DetailsScreen */,
+				E4F6C2122A9E3E13000251F3 /* Models */,
+				E4F6C2152A9E43C6000251F3 /* Services */,
+				E4F6C2032A9E34E0000251F3 /* Storyboards */,
+				E4F6C2042A9E34E8000251F3 /* Resources */,
 			);
 			path = TimeToTravel;
+			sourceTree = "<group>";
+		};
+		E4F6C2022A9E348E000251F3 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				E4F6C1EE2A9E2F4C000251F3 /* AppDelegate.swift */,
+				E4F6C1F02A9E2F4C000251F3 /* SceneDelegate.swift */,
+				E4F6C1FC2A9E2F4E000251F3 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		E4F6C2032A9E34E0000251F3 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				E4F6C1F92A9E2F4E000251F3 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		E4F6C2042A9E34E8000251F3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E4F6C1F72A9E2F4E000251F3 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E4F6C2052A9E352B000251F3 /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				E4F6C1F22A9E2F4C000251F3 /* MainViewController.swift */,
+				E4F6C2092A9E3636000251F3 /* MainViewModel.swift */,
+				E4F6C20B2A9E3AFB000251F3 /* FlightCell */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		E4F6C2062A9E354C000251F3 /* DetailsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				E4F6C2072A9E3566000251F3 /* DetailsViewController.swift */,
+				E4F6C2102A9E3DA0000251F3 /* DetailsViewModel.swift */,
+			);
+			path = DetailsScreen;
+			sourceTree = "<group>";
+		};
+		E4F6C20B2A9E3AFB000251F3 /* FlightCell */ = {
+			isa = PBXGroup;
+			children = (
+				E4F6C20C2A9E3B26000251F3 /* FlightCell.swift */,
+				E4F6C20E2A9E3CCA000251F3 /* FlightCellViewModel.swift */,
+			);
+			path = FlightCell;
+			sourceTree = "<group>";
+		};
+		E4F6C2122A9E3E13000251F3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E4F6C2132A9E3E2A000251F3 /* Flight.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E4F6C2152A9E43C6000251F3 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E4F6C2162A9E43DF000251F3 /* NetworkManager.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,9 +219,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4F6C1F32A9E2F4C000251F3 /* ViewController.swift in Sources */,
+				E4F6C2142A9E3E2A000251F3 /* Flight.swift in Sources */,
+				E4F6C20F2A9E3CCA000251F3 /* FlightCellViewModel.swift in Sources */,
+				E4F6C2172A9E43DF000251F3 /* NetworkManager.swift in Sources */,
+				E4F6C20A2A9E3636000251F3 /* MainViewModel.swift in Sources */,
+				E4F6C20D2A9E3B26000251F3 /* FlightCell.swift in Sources */,
+				E4F6C2112A9E3DA0000251F3 /* DetailsViewModel.swift in Sources */,
+				E4F6C1F32A9E2F4C000251F3 /* MainViewController.swift in Sources */,
 				E4F6C1EF2A9E2F4C000251F3 /* AppDelegate.swift in Sources */,
 				E4F6C1F12A9E2F4C000251F3 /* SceneDelegate.swift in Sources */,
+				E4F6C2082A9E3566000251F3 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +369,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X7QDNJU74Z;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TimeToTravel/Info.plist;
+				INFOPLIST_FILE = TimeToTravel/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -308,7 +400,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X7QDNJU74Z;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TimeToTravel/Info.plist;
+				INFOPLIST_FILE = TimeToTravel/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;

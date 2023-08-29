@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  DetailsViewController.swift
 //  TimeToTravel
 //
 //  Created by Руслан Шигапов on 29.08.2023.
@@ -7,11 +7,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class DetailsViewController: UIViewController {
 
+    var viewModel: DetailsViewModelProtocol!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .blue
+        
     }
 }
-
