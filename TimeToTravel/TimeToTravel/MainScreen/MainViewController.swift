@@ -47,6 +47,7 @@ final class MainViewController: UIViewController {
         
         title = "Пора в путешествие"
         navigationController?.navigationBar.prefersLargeTitles = true
+        // TODO: Navigation bar color
         
         view.addSubview(tableView)
         view.addSubview(activityIndicator)

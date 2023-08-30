@@ -30,7 +30,7 @@ final class NetworkManager {
         AF.request(
             "https://vmeste.wildberries.ru/stream/api/avia-service/v1/suggests/getCheap",
             method: .post,
-            parameters: ["startLocationCode": "LED"],
+            parameters: ["startLocationCode": "KZN"],
             encoder: JSONParameterEncoder.default,
             headers: headers
         )

@@ -12,6 +12,8 @@ struct Response: Decodable {
 struct Flight: Decodable {
     let startDate: String
     let endDate: String
+    let startLocationCode: String
+    let endLocationCode: String
     let startCity: String
     let endCity: String
     let price: Int
