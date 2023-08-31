@@ -98,7 +98,6 @@ final class DetailsViewController: UIViewController {
     private lazy var likeImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.image = UIImage(systemName: "star")
         imageView.tintColor = .orange
         return imageView
     }()
@@ -109,6 +108,12 @@ final class DetailsViewController: UIViewController {
         button.backgroundColor = UIColor(named: "CustomBlue")
         button.setTitle("Мне нравится", for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 16)
+        button.titleLabel?.textColor = .orange
+        button.addTarget(
+            self,
+            action: #selector(likeButtonPressed),
+            for: .touchUpInside
+        )
         return button
     }()
 
@@ -121,6 +126,11 @@ final class DetailsViewController: UIViewController {
             startLocationLabel.text = viewModel.startLocation
             endDateLabel.text = viewModel.endDate
             endLocationLabel.text = viewModel.endLocation
+            setStatusForLikeImageView(viewModel.isFavorite)
+            
+            viewModel.viewModelDidChange = { [unowned self] viewModel in
+                setStatusForLikeImageView(viewModel.isFavorite)
+            }
         }
     }
     
@@ -154,6 +164,16 @@ final class DetailsViewController: UIViewController {
         navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
     }
     
+    private func setStatusForLikeImageView(_ status: Bool) {
+        likeImageView.image = status
+        ? UIImage(systemName: "star.fill")
+        : UIImage(systemName: "star")
+    }
+    
+    @objc private func likeButtonPressed() {
+        viewModel.toggleFavorite()
+    }
+    
     private func setConstraints() {
         NSLayoutConstraint.activate([
             priceLabel.topAnchor.constraint(
@@ -162,8 +182,7 @@ final class DetailsViewController: UIViewController {
             priceLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
             adLabel.topAnchor.constraint(
-                equalTo: priceLabel.bottomAnchor,
-                constant: 8
+                equalTo: priceLabel.bottomAnchor
             ),
             adLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             adLabel.widthAnchor.constraint(equalToConstant: 210),
@@ -178,7 +197,7 @@ final class DetailsViewController: UIViewController {
             
             backgroundView.topAnchor.constraint(
                 equalTo: directionLabel.bottomAnchor,
-                constant: 8
+                constant: 5
             ),
             backgroundView.leadingAnchor.constraint(
                 equalTo: view.leadingAnchor,
@@ -199,12 +218,27 @@ final class DetailsViewController: UIViewController {
                 constant: 16
             ),
             
-            likeImageView.topAnchor.constraint(equalTo: backgroundView.topAnchor, constant: 32),
-            likeImageView.trailingAnchor.constraint(equalTo: backgroundView.trailingAnchor, constant: -22),
+            likeImageView.topAnchor.constraint(
+                equalTo: backgroundView.topAnchor,
+                constant: 32
+            ),
+            likeImageView.trailingAnchor.constraint(
+                equalTo: backgroundView.trailingAnchor,
+                constant: -22
+            ),
             
-            likeButton.bottomAnchor.constraint(equalTo: backgroundView.bottomAnchor, constant: -16),
-            likeButton.leadingAnchor.constraint(equalTo: backgroundView.leadingAnchor, constant: 16),
-            likeButton.trailingAnchor.constraint(equalTo: backgroundView.trailingAnchor, constant: -16),
+            likeButton.bottomAnchor.constraint(
+                equalTo: backgroundView.bottomAnchor,
+                constant: -16
+            ),
+            likeButton.leadingAnchor.constraint(
+                equalTo: backgroundView.leadingAnchor,
+                constant: 16
+            ),
+            likeButton.trailingAnchor.constraint(
+                equalTo: backgroundView.trailingAnchor,
+                constant: -16
+            ),
             likeButton.heightAnchor.constraint(equalToConstant: 50)
         ])
     }

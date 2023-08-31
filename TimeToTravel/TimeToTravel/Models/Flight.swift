@@ -17,4 +17,5 @@ struct Flight: Decodable {
     let startCity: String
     let endCity: String
     let price: Int
+    let searchToken: String
 }

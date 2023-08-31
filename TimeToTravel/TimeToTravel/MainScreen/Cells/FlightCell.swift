@@ -120,20 +120,12 @@ final class FlightCell: UITableViewCell {
     private lazy var likeImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        
-        
-        
-        // TODO: Add logic of switch
-        
-        
-        
-        imageView.image = UIImage(systemName: "star")
         imageView.tintColor = .orange
         return imageView
     }()
     
     // MARK: - Public Properties
-    var viewModel: FlightCellViewModelProtocol! {
+    var viewModel: DetailsViewModelProtocol! {
         didSet {
             startDateLabel.text = viewModel.startDate
             startLocationLabel.text = viewModel.startLocationCode
@@ -156,11 +148,22 @@ final class FlightCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        setStatusForLikeImageView(viewModel.isFavorite)
+    }
+    
     // MARK: - Private Methods
     private func setupUI() {
         addSubview(flightInfoStackView)
         addSubview(priceStackView)
         addSubview(directionStackView)
+    }
+    
+    private func setStatusForLikeImageView(_ status: Bool) {
+        likeImageView.image = status
+        ? UIImage(systemName: "star.fill")
+        : UIImage(systemName: "star")
     }
     
     private func setConstraints() {

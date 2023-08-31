@@ -13,12 +13,19 @@ protocol DetailsViewModelProtocol {
     var startDate: String { get }
     var endDate: String { get }
     var startLocation: String { get }
+    var startLocationCode: String { get }
     var endLocation: String { get }
+    var endLocationCode: String { get }
+    var startCity: String { get }
+    var endCity: String { get }
+    var isFavorite: Bool { get }
+    var viewModelDidChange: ((DetailsViewModelProtocol) -> Void)? { get set }
     init(flight: Flight)
+    func toggleFavorite()
 }
 
 final class DetailsViewModel: DetailsViewModelProtocol {
-    
+
     var price: String {
         "\(flight.price) \u{20BD}"
     }
@@ -41,14 +48,48 @@ final class DetailsViewModel: DetailsViewModelProtocol {
         flight.startCity + ", " + flight.startLocationCode
     }
     
+    var startLocationCode: String {
+        flight.startLocationCode
+    }
+    
     var endLocation: String {
         flight.endCity + ", " + flight.endLocationCode
     }
+    
+    var endLocationCode: String {
+        flight.endLocationCode
+    }
+
+    var startCity: String {
+        flight.startCity
+    }
+    
+    var endCity: String {
+        flight.endCity
+    }
+    
+    var isFavorite: Bool {
+        get {
+            DataManager.shared.getFavoriteStatus(for: flight.searchToken)
+        } set {
+            DataManager.shared.setFavoriteStatus(
+                for: flight.searchToken,
+                with: newValue
+            )
+            viewModelDidChange?(self)
+        }
+    }
+    
+    var viewModelDidChange: ((DetailsViewModelProtocol) -> Void)?
     
     private let flight: Flight
     
     required init(flight: Flight) {
         self.flight = flight
+    }
+    
+    func toggleFavorite() {
+        isFavorite.toggle()
     }
     
     private func getFormattedDate(from date: String) -> String {

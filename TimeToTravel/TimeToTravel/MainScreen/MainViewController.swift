@@ -93,7 +93,7 @@ extension MainViewController: UITableViewDataSource {
             for: indexPath
         )
         guard let cell = cell as? FlightCell else { return UITableViewCell() }
-        cell.viewModel = viewModel.getFlightCellViewModel(at: indexPath)
+        cell.viewModel = viewModel.getDetailsViewModel(at: indexPath)
         return cell
     }
 }
