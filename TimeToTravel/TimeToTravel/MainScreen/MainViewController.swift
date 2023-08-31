@@ -45,15 +45,27 @@ final class MainViewController: UIViewController {
     private func setupUI() {
         viewModel = MainViewModel()
         
-        title = "Пора в путешествие"
-        navigationController?.navigationBar.prefersLargeTitles = true
-        // TODO: Navigation bar color
+        setupNavigationBar()
         
         view.addSubview(tableView)
         view.addSubview(activityIndicator)
                         
         tableView.dataSource = self
         tableView.delegate = self
+    }
+    
+    private func setupNavigationBar() {
+        title = "Пора в путешествие"
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
+        let navBarAppearance = UINavigationBarAppearance()
+        navBarAppearance.backgroundColor = UIColor(named: "CustomBlue")
+        navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+        navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        navBarAppearance.shadowColor = .clear
+        
+        navigationController?.navigationBar.standardAppearance = navBarAppearance
+        navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
     }
     
     private func setConstraints() {
@@ -93,7 +105,7 @@ extension MainViewController: UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
         let detailsVC = DetailsViewController()
         detailsVC.viewModel = viewModel.getDetailsViewModel(at: indexPath)
-        present(detailsVC, animated: true)
+        navigationController?.pushViewController(detailsVC, animated: true)
     }
 }
 

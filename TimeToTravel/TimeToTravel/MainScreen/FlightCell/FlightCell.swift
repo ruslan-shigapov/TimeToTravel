@@ -89,12 +89,14 @@ final class FlightCell: UITableViewCell {
     private lazy var startCityLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
+        label.font = .init(name: "Bradley Hand", size: 18)
         return label
     }()
     
     private lazy var endCityLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
+        label.font = .init(name: "Bradley Hand", size: 18)
         return label
     }()
     
@@ -111,15 +113,22 @@ final class FlightCell: UITableViewCell {
     
     private lazy var priceLabel: UILabel = {
         let label = UILabel()
-        label.font = .boldSystemFont(ofSize: 20)
+        label.font = .boldSystemFont(ofSize: 18)
         return label
     }()
     
     private lazy var likeImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.image = UIImage(systemName: "hand.thumbsup")
-        imageView.tintColor = .systemGray
+        
+        
+        
+        // TODO: Add logic of switch
+        
+        
+        
+        imageView.image = UIImage(systemName: "star")
+        imageView.tintColor = .orange
         return imageView
     }()
     
@@ -170,7 +179,10 @@ final class FlightCell: UITableViewCell {
             ),
             
             directionStackView.centerYAnchor.constraint(equalTo: centerYAnchor),
-            directionStackView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            directionStackView.centerXAnchor.constraint(
+                equalTo: centerXAnchor,
+                constant: 16
+            ),
             
             priceStackView.centerYAnchor.constraint(equalTo: centerYAnchor),
             priceStackView.trailingAnchor.constraint(
@@ -178,8 +190,8 @@ final class FlightCell: UITableViewCell {
                 constant: -16
             ),
             
-            likeImageView.widthAnchor.constraint(equalToConstant: 30),
-            likeImageView.heightAnchor.constraint(equalToConstant: 30)
+            likeImageView.widthAnchor.constraint(equalToConstant: 20),
+            likeImageView.heightAnchor.constraint(equalToConstant: 20)
         ])
     }
 }

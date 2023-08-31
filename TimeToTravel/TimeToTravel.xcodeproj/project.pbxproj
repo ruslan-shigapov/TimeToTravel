@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E45563412AA07A72000307DE /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45563402AA07A72000307DE /* DetailsViewModel.swift */; };
 		E49126752A9E491A0042F687 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = E49126742A9E491A0042F687 /* Alamofire */; };
 		E4F6C1EF2A9E2F4C000251F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F6C1EE2A9E2F4C000251F3 /* AppDelegate.swift */; };
 		E4F6C1F12A9E2F4C000251F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F6C1F02A9E2F4C000251F3 /* SceneDelegate.swift */; };
@@ -16,13 +17,13 @@
 		E4F6C2082A9E3566000251F3 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F6C2072A9E3566000251F3 /* DetailsViewController.swift */; };
 		E4F6C20A2A9E3636000251F3 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F6C2092A9E3636000251F3 /* MainViewModel.swift */; };
 		E4F6C20D2A9E3B26000251F3 /* FlightCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F6C20C2A9E3B26000251F3 /* FlightCell.swift */; };
-		E4F6C20F2A9E3CCA000251F3 /* FlightCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F6C20E2A9E3CCA000251F3 /* FlightCellViewModel.swift */; };
-		E4F6C2112A9E3DA0000251F3 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F6C2102A9E3DA0000251F3 /* DetailsViewModel.swift */; };
+		E4F6C2112A9E3DA0000251F3 /* FlightCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F6C2102A9E3DA0000251F3 /* FlightCellViewModel.swift */; };
 		E4F6C2142A9E3E2A000251F3 /* Flight.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F6C2132A9E3E2A000251F3 /* Flight.swift */; };
 		E4F6C2172A9E43DF000251F3 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F6C2162A9E43DF000251F3 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E45563402AA07A72000307DE /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
 		E4F6C1EB2A9E2F4C000251F3 /* TimeToTravel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeToTravel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4F6C1EE2A9E2F4C000251F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4F6C1F02A9E2F4C000251F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,8 +34,7 @@
 		E4F6C2072A9E3566000251F3 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		E4F6C2092A9E3636000251F3 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		E4F6C20C2A9E3B26000251F3 /* FlightCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightCell.swift; sourceTree = "<group>"; };
-		E4F6C20E2A9E3CCA000251F3 /* FlightCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightCellViewModel.swift; sourceTree = "<group>"; };
-		E4F6C2102A9E3DA0000251F3 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
+		E4F6C2102A9E3DA0000251F3 /* FlightCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightCellViewModel.swift; sourceTree = "<group>"; };
 		E4F6C2132A9E3E2A000251F3 /* Flight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flight.swift; sourceTree = "<group>"; };
 		E4F6C2162A9E43DF000251F3 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -121,7 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				E4F6C2072A9E3566000251F3 /* DetailsViewController.swift */,
-				E4F6C2102A9E3DA0000251F3 /* DetailsViewModel.swift */,
+				E45563402AA07A72000307DE /* DetailsViewModel.swift */,
 			);
 			path = DetailsScreen;
 			sourceTree = "<group>";
@@ -130,7 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				E4F6C20C2A9E3B26000251F3 /* FlightCell.swift */,
-				E4F6C20E2A9E3CCA000251F3 /* FlightCellViewModel.swift */,
+				E4F6C2102A9E3DA0000251F3 /* FlightCellViewModel.swift */,
 			);
 			path = FlightCell;
 			sourceTree = "<group>";
@@ -228,13 +228,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4F6C2142A9E3E2A000251F3 /* Flight.swift in Sources */,
-				E4F6C20F2A9E3CCA000251F3 /* FlightCellViewModel.swift in Sources */,
 				E4F6C2172A9E43DF000251F3 /* NetworkManager.swift in Sources */,
 				E4F6C20A2A9E3636000251F3 /* MainViewModel.swift in Sources */,
 				E4F6C20D2A9E3B26000251F3 /* FlightCell.swift in Sources */,
-				E4F6C2112A9E3DA0000251F3 /* DetailsViewModel.swift in Sources */,
+				E4F6C2112A9E3DA0000251F3 /* FlightCellViewModel.swift in Sources */,
 				E4F6C1F32A9E2F4C000251F3 /* MainViewController.swift in Sources */,
 				E4F6C1EF2A9E2F4C000251F3 /* AppDelegate.swift in Sources */,
+				E45563412AA07A72000307DE /* DetailsViewModel.swift in Sources */,
 				E4F6C1F12A9E2F4C000251F3 /* SceneDelegate.swift in Sources */,
 				E4F6C2082A9E3566000251F3 /* DetailsViewController.swift in Sources */,
 			);
@@ -380,8 +380,8 @@
 				INFOPLIST_FILE = TimeToTravel/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -411,8 +411,8 @@
 				INFOPLIST_FILE = TimeToTravel/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
