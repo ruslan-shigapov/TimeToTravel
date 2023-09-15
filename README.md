@@ -1,5 +1,5 @@
 # TimeToTravel
-Test task 
+Test task by Wildberries
 
 <img width="366" alt="Screenshot_1" src="https://github.com/ruslan-shigapov/TimeToTravel/assets/104629658/10946b24-c689-416d-94e4-3df18b64a3ea">
 
